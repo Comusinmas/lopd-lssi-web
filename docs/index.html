@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>I+ Web</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<!-- Barra de navegació -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">I+ Web</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inici</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Serveis</a></li>
+            <li class="nav-item"><a class="nav-link" href="#acerca">Sobre nosaltres</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacte</a></li>
+            <li class="nav-item"><a class="nav-link" href="avis-legal.html">Avís Legal</a></li>
+            <li class="nav-item"><a class="nav-link" href="privacitat.html">Privacitat</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Inici -->
+<section id="inicio" class="container mt-5 text-center">
+    <h2>Benvingut a I+ Web</h2>
+    <img src="img/main.jpg" alt="Imatge inici" class="img-fluid mb-3">
+    <p>Especialistes en Disseny Web i eCommerce.</p>
+    <h3>Impulsem el teu negoci en el món digital</h3>
+</section>
+
+<!-- Serveis -->
+<section id="servicios" class="container mt-5">
+    <h2>Els nostres serveis</h2>
+    <div class="row text-center">
+        <div class="col">
+            <img src="img/ecommerce.jpg" class="img-fluid">
+            <h3>E-Commerce</h3>
+            <p>T'ajudem a augmentar les teves vendes.</p>
+        </div>
+        <div class="col">
+            <img src="img/marketing.jpg" class="img-fluid">
+            <h3>Marketing Digital</h3>
+            <p>SEO, xarxes socials i estratègia digital.</p>
+        </div>
+        <div class="col">
+            <img src="img/web.jpg" class="img-fluid">
+            <h3>Disseny Web</h3>
+            <p>Dissenys adaptats al teu negoci.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sobre nosaltres -->
+<section id="acerca" class="container mt-5">
+    <h2>Sobre nosaltres</h2>
+    <img src="img/about-us.jpg" class="img-fluid mb-3">
+    <p>I+ Web S.A.</p>
+    <p>Av. Ernest Lluch, 32 · Mataró (Barcelona)</p>
+    <p>Telèfon: +34 555 555 555</p>
+    <p>Email: info@iweb.com</p>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.891551493971!2d2.4314594761544495!3d41.52828972128234"
+        width="100%" height="300" style="border:0;" loading="lazy"></iframe>
+</section>
+
+<!-- Contacte -->
+<section id="contacto" class="container mt-5">
+    <h2>Contacte</h2>
+    <img src="img/contacte.jpg" class="img-fluid mb-3">
+
+    <form id="contactForm" onsubmit="enviarFormulario(); return false;">
+        <div class="form-group">
+            <label>Nom</label>
+            <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="form-group">
+            <label>Correu electrònic</label>
+            <input type="email" class="form-control" id="correo" required>
+        </div>
+        <div class="form-group">
+            <label>Telèfon</label>
+            <input type="tel" class="form-control" id="telefono" required>
+        </div>
+        <div class="form-group">
+            <label>Missatge</label>
+            <textarea class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        <button class="btn btn-primary">Enviar</button>
+    </form>
+
+    <div id="resultado" class="mt-3"></div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-4 mt-5">
+    © 2025 I+ Web S.A. · Tots els drets reservats
+</footer>
+
+<!-- Avís de cookies -->
+<div id="cookie-banner" style="display:none; position:fixed; bottom:0; width:100%; background:#000; color:#fff; padding:15px; text-align:center; z-index:9999;">
+    Aquest lloc web utilitza cookies pròpies i de tercers.
+    <a href="privacitat.html" style="color:#0d6efd;">Més informació</a>
+    <button onclick="acceptCookies()" class="btn btn-primary btn-sm ml-2">Acceptar</button>
+</div>
+
+<!-- JS -->
+<script src="cookies.js"></script>
+
+<script>
+function enviarFormulario() {
+    document.getElementById("resultado").innerHTML =
+        "<div class='alert alert-success'>Formulari enviat correctament</div>";
+    document.getElementById("contactForm").reset();
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
